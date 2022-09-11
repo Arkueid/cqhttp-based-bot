@@ -128,6 +128,12 @@ class FriendPokeNotice(Notice):
         if "target_id" in d:
             self.__dict__["target_id"] = d["target_id"]
 
+    def __eq__(self, other):
+        return other == "FriendPokeNotice"
+
+    def react(self):
+        api.send_private_msg(self.sender_id, '', "好痛！不要再戳啦！>_<")
+
 
 class GroupPokeNotice(Notice):
 
@@ -141,6 +147,12 @@ class GroupPokeNotice(Notice):
             self.__dict__["user_id"] = d["user_id"]
         if "target_id" in d:
             self.__dict__["target_id"] = d["target_id"]
+
+    def __eq__(self, other):
+        return other == "GroupPokeNotice"
+
+    def react(self):
+        api.send_group_msg(self.group_id, f"[CQ:at,qq={self.sender_id}]好痛！不要再戳啦！>_<")
 
 
 class GroupLuckyKingNotice(Notice):
