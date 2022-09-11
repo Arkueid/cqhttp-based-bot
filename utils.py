@@ -15,7 +15,7 @@ def parsePost(p, core):
         if msg_type == "private":
             return PrivateMessage(p, core)
         elif msg_type == "group":
-            return GroupMessage(p)
+            return GroupMessage(p, core)
     # request
     if post_type == "request":
         req_type = p["request_type"]

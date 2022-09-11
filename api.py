@@ -6,6 +6,12 @@ import urllib.request
 import urllib.parse
 import lxml.etree
 
+authorized_groups = [
+    826422163,
+    970293394,
+    962617351
+]
+
 
 def urlAt(node):
     return urljoin("http://127.0.0.1:5700", node)
@@ -47,6 +53,8 @@ def send_private_msg(user_id, group_id, message, auto_escape=False):
 
 
 def send_group_msg(group_id, message, auto_escape=False):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
         "message": message,
@@ -57,6 +65,8 @@ def send_group_msg(group_id, message, auto_escape=False):
 
 
 def send_group_forward_msg(group_id, messages, ):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
         "messages": messages,
@@ -66,6 +76,8 @@ def send_group_forward_msg(group_id, messages, ):
 
 
 def send_msg(message_type, user_id, group_id, message, auto_escape=False):
+    if group_id not in authorized_groups:
+        return
     params = {
         "message_type": message_type,
         "user_id": user_id,
@@ -119,6 +131,8 @@ def mark_msg_as_read(file):
 
 
 def set_group_kick(group_id, user_id, reject_add_request=False):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
         "user_id": user_id,
@@ -129,6 +143,8 @@ def set_group_kick(group_id, user_id, reject_add_request=False):
 
 
 def set_group_ban(group_id, user_id, duration):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
         "user_id": user_id,
@@ -139,6 +155,8 @@ def set_group_ban(group_id, user_id, duration):
 
 
 def set_group_anonymous_ban(group_id, anonymous, flag, duration):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
         "anonymous": anonymous,
@@ -150,6 +168,8 @@ def set_group_anonymous_ban(group_id, anonymous, flag, duration):
 
 
 def set_group_whole_ban(group_id, enable):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
         "enable": enable,
@@ -159,6 +179,8 @@ def set_group_whole_ban(group_id, enable):
 
 
 def set_group_admin(group_id, user_id, enable):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
         "user_id": user_id,
@@ -169,6 +191,8 @@ def set_group_admin(group_id, user_id, enable):
 
 
 def set_group_anonymous(group_id, enable):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
         "enable": enable,
@@ -178,6 +202,8 @@ def set_group_anonymous(group_id, enable):
 
 
 def set_group_card(group_id, enable, card):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
         "enable": enable,
@@ -188,6 +214,8 @@ def set_group_card(group_id, enable, card):
 
 
 def set_group_name(group_id, group_name):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
         "group_name": group_name,
@@ -197,6 +225,8 @@ def set_group_name(group_id, group_name):
 
 
 def set_group_leave(group_id, is_dismiss=False):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
         "is_dismiss": is_dismiss,
@@ -206,6 +236,8 @@ def set_group_leave(group_id, is_dismiss=False):
 
 
 def set_group_special_title(group_id, user_id, special_title, duration=-1):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
         "user_id": user_id,
@@ -217,6 +249,8 @@ def set_group_special_title(group_id, user_id, special_title, duration=-1):
 
 
 def send_group_sign(group_id):
+    if group_id not in authorized_groups:
+        return
     params = {
         "group_id": group_id,
     }

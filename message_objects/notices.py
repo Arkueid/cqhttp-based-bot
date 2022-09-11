@@ -1,3 +1,4 @@
+import api
 from .base_objects import Notice
 
 
@@ -38,6 +39,12 @@ class GroupDecreaseNotice(Notice):
         if "operator_id" in d:
             self.__dict__["operator_id"] = d["operator_id"]
 
+    def __eq__(self, other):
+        return other == "GroupDecreaseNotice"
+
+    def react(self):
+        api.send_group_msg(self.group_id, "有人退群了￣へ￣")
+
 
 class GroupIncreaseNotice(Notice):
 
@@ -51,6 +58,13 @@ class GroupIncreaseNotice(Notice):
             self.__dict__["user_id"] = d["user_id"]
         if "operator_id" in d:
             self.__dict__["operator_id"] = d["operator_id"]
+
+    def react(self):
+        api.send_group_msg(self.group_id, f"[CQ:at,qq={self.user_id}]\n"
+                                          f"欢迎萌新入群！要好好遵守群规哦！")
+
+    def __eq__(self, other):
+        return other == "GroupIncreaseNotice"
 
 
 class GroupBanNotice(Notice):

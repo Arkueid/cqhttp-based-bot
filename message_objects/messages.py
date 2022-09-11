@@ -15,6 +15,8 @@ class PrivateMessage(Message):
 
     def reply(self):
         r = self.core.match_keyword(self.raw_message)
+        if not r:
+            return
         if "&" in r:
             if r == "&today-in-history":
                 r = api.whatstoday()
@@ -26,15 +28,31 @@ class PrivateMessage(Message):
     def __eq__(self, other):
         return other == "PrivateMessage"
 
+
 class GroupMessage(Message):
 
-    def __init__(self, d: dict):
+    def __init__(self, d: dict, core: Core):
         super(GroupMessage, self).__init__(d)
         if "group_id" in d:
             self.__dict__["group_id"] = d["group_id"]
         if "anonymous" in d:
             self.__dict__["anonymous"] = d["anonymous"]
+        self.core = core
 
+    def __eq__(self, other):
+        return other == "GroupMessage"
+
+    def reply(self):
+        r = self.core.match_keyword(self.raw_message)
+        if not r:
+            return
+        if "&" in r:
+            if r == "&today-in-history":
+                r = api.whatstoday()
+        else:
+            ls = r.split("|")
+            r = random.choice(ls)
+        api.send_group_msg(self.group_id, f"[CQ:at,qq={self.user_id}]\n" + r)
 
 
 

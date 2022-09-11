@@ -12,8 +12,10 @@ def listen():
     post = request.get_json()
     result = parsePost(post, core)
     print(result.__class__)
-    if result == "PrivateMessage":
+    if result == ("PrivateMessage" or "GroupMessage"):
         result.reply()
+    elif result == ("GroupDecreaseNotice" or "GroupIncreaseNotice"):
+        result.react()
     return ''
 
 

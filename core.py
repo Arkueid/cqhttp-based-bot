@@ -40,6 +40,8 @@ class Core:
                 if i in raw_message:
                     match_word = i
                     break
+            if not match_word:
+                return None
             r = self.keywords[match_word]
             if "&" in r:
                 return r
