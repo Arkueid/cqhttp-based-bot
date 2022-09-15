@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b7a54f4-5e71-400b-b12e-d57acfe7c871" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/go-cqhttp_windows_amd64/logs/2022-09-13.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cqhttp-based-bot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cqhttp-based-bot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listen.py" beforeDir="false" afterPath="$PROJECT_DIR$/listen.py" afterDir="false" />
+    <list default="true" id="6b7a54f4-5e71-400b-b12e-d57acfe7c871" name="Changes" comment="2022/9/15">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp/go-cqhttp" beforeDir="false" afterPath="$PROJECT_DIR$/go-cqhttp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/db_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/keywords.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/replies.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/replies.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/rule.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/cache/77ade4524a4aa131106d61b371346ab4.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/image.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/image.db.lock" beforeDir="false" afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/000109.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/000112.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/000119.log" beforeDir="false" afterPath="$PROJECT_DIR$/friendliness.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/CURRENT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/CURRENT.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/LOCK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/LOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/MANIFEST-000120" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/video.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/video.db.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/voices/1EF005FC-677B-E021-B4C1-BEBE9DCA66CB.amr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/device.json" beforeDir="false" afterPath="$PROJECT_DIR$/device.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/go-cqhttp.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/go-cqhttp.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/logs/2022-09-09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/logs/2022-09-10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/logs/2022-09-11.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/logs/2022-09-13.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/session.token" beforeDir="false" afterPath="$PROJECT_DIR$/session.token" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message_objects/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_objects/messages.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,11 +68,61 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/projects_python/others&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/projects_python/cqhttp-based-bot&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects_python\cqhttp-based-bot" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects_python\cqhttp-based-bot" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.listen">
+    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cqhttp-based-bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="db_tools" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cqhttp-based-bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/db_tools.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="listen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cqhttp-based-bot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -49,6 +136,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/listen.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="messages" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cqhttp-based-bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/message_objects" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/message_objects/messages.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -78,32 +186,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="x" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="cqhttp-based-bot" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/x.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.listen" />
+        <item itemvalue="Python.db_tools" />
+        <item itemvalue="Python.messages" />
+        <item itemvalue="Python.1" />
         <item itemvalue="Python.notices" />
-        <item itemvalue="Python.x" />
       </list>
     </recent_temporary>
   </component>
@@ -123,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662869398277</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2022/9/15">
+      <created>1663243372886</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663243372886</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2022/9/15">
+      <created>1663243383611</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663243383611</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +243,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="2022/9/15" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022/9/15" />
   </component>
 </project>

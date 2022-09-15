@@ -47,4 +47,13 @@ class Database:
 
 
 if __name__ == '__main__':
-    init_db()
+    conn = sqlite3.connect('../friendliness.db')
+    conn.execute('create table user_friendliness('
+                 'id integer primary key autoincrement,'
+                 'user_id int not null unique,'
+                 'friendliness int not null default 50);')
+    # conn.execute('insert into user_friendliness (user_id, friendliness) values(33275655354404, 100);')
+    # conn.execute('update user_friendliness set friendliness=0 where user_id=3327565304;')
+    # conn.commit()
+    # df = pd.read_sql('select * from user_friendliness', conn)
+    # print(df)

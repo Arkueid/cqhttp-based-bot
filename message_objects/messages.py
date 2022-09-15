@@ -1,4 +1,6 @@
 import random
+import sqlite3
+import time
 
 from .base_objects import Message
 from core import Core
@@ -20,6 +22,39 @@ class PrivateMessage(Message):
         if "&" in r:
             if r == "&today-in-history":
                 r = api.whatstoday()
+            elif r == "&date":
+                r = time.strftime("现在时间：%Y年%m月%d %H时%M分%S秒", time.localtime(time.time()))
+            elif r == "&feed":
+                conn = sqlite3.connect('friendliness.db')
+                cursor = conn.cursor()
+                cursor.execute('select user_id from user_friendliness;')
+                if self.user_id not in tuple(map(lambda x: x[0], cursor.fetchall())):
+                    cursor.execute('insert into user_friendliness (user_id, friendliness) values(%s, %d);' % (self.user_id, 50))
+                cursor.execute('select friendliness from user_friendliness where user_id=%d' % self.user_id)
+                r = cursor.fetchall()
+                add_int = random.randint(-5, 5)
+                friendliness = r[0][0] + add_int if r[0][0] <= 100 else 100
+                cursor.execute('update user_friendliness set friendliness=%d where user_id=%d' % (friendliness, self.user_id))
+                cursor.close()
+                conn.commit()
+                conn.close()
+                if add_int > 0:
+                    r = 'Yum！yum！好感度+%d' % add_int
+                elif add_int < 0:
+                    r = '不要再喂啦~好感度%d' % add_int
+                else:
+                    r = '嗯~什么都没有发生！'
+            elif r == "&friendliness":
+                conn = sqlite3.connect('friendliness.db')
+                cursor = conn.cursor()
+                cursor.execute('select user_id from user_friendliness;')
+                if self.user_id not in tuple(map(lambda x: x[0], cursor.fetchall())):
+                    cursor.execute('insert into user_friendliness (user_id, friendliness) values(%s, %d);' % (self.user_id, 50))
+                cursor.execute('select friendliness from user_friendliness where user_id=%d' % self.user_id)
+                r = 'Aki对%s的好感度为：%d' % (self.sender['nickname'], cursor.fetchall()[0][0])
+                cursor.close()
+                conn.close()
+
         else:
             ls = r.split("|")
             r = random.choice(ls)
@@ -49,10 +84,42 @@ class GroupMessage(Message):
         if "&" in r:
             if r == "&today-in-history":
                 r = api.whatstoday()
+            elif r == "&date":
+                r = time.strftime("现在时间：%Y年%m月%d %H时%M分%S秒", time.localtime(time.time()))
+            elif r == "&feed":
+                conn = sqlite3.connect('friendliness.db')
+                cursor = conn.cursor()
+                cursor.execute('select user_id from user_friendliness;')
+                if self.user_id not in tuple(map(lambda x: x[0], cursor.fetchall())):
+                    cursor.execute('insert into user_friendliness (user_id, friendliness) values(%s, %d);' % (self.user_id, 50))
+                cursor.execute('select friendliness from user_friendliness where user_id=%d' % self.user_id)
+                r = cursor.fetchall()
+                add_int = random.randint(-5, 5)
+                friendliness = r[0][0] + add_int if r[0][0] <= 100 else 100
+                cursor.execute('update user_friendliness set friendliness=%d where user_id=%d' % (friendliness, self.user_id))
+                conn.commit()
+                conn.close()
+                if add_int > 0:
+                    r = 'Yum！yum！好感度+%d' % add_int
+                elif add_int < 0:
+                    r = '不要再喂啦~好感度%d' % add_int
+                else:
+                    r = '嗯~什么都没有发生！'
+            elif r == "&friendliness":
+                conn = sqlite3.connect('friendliness.db')
+                cursor = conn.cursor()
+                cursor.execute('select user_id from user_friendliness;')
+                if self.user_id not in tuple(map(lambda x: x[0], cursor.fetchall())):
+                    cursor.execute('insert into user_friendliness (user_id, friendliness) values(%s, %d);' % (self.user_id, 50))
+                cursor.execute('select friendliness from user_friendliness where user_id=%d' % self.user_id)
+                r = 'Aki对%s的好感度为：%d' % (self.sender['nickname'], cursor.fetchall()[0][0])
+                cursor.close()
+                conn.close()
         else:
             ls = r.split("|")
             r = random.choice(ls)
         api.send_group_msg(self.group_id, f"[CQ:at,qq={self.user_id}]\n" + r)
+
 
 
 
