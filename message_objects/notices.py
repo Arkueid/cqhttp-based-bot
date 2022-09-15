@@ -61,7 +61,8 @@ class GroupIncreaseNotice(Notice):
 
     def react(self):
         api.send_group_msg(self.group_id, f"[CQ:at,qq={self.user_id}]\n"
-                                          f"欢迎萌新入群！要好好遵守群规哦！")
+                                          f"欢迎萌新入群！要好好遵守群规哦！\n"
+                                          f"[CQ:image,file=https://i0.hdslb.com/bfs/article/12de0f4778b664a5d8f096e89931c90a91ef60e4.jpg@564w_533h_progressive.webp]")
 
     def __eq__(self, other):
         return other == "GroupIncreaseNotice"
@@ -132,7 +133,7 @@ class FriendPokeNotice(Notice):
         return other == "FriendPokeNotice"
 
     def react(self):
-        api.send_private_msg(self.sender_id, '', "好痛！不要再戳啦！>_<")
+        api.send_private_msg(self.sender_id, '', "好痛！不要再戳啦！\n[CQ:image,file=https://i0.hdslb.com/bfs/article/9d828e830cfddb578c98f5a25f128f6e463a5bc9.jpg@750w_750h_progressive.webp]")
 
 
 class GroupPokeNotice(Notice):
@@ -142,7 +143,7 @@ class GroupPokeNotice(Notice):
         if "sub_type" in d:
             self.__dict__["sub_type"] = d["sub_type"]
         if "group_id" in d:
-            self.__dict__["sender_id"] = d["sender_id"]
+            self.__dict__["group_id"] = d["group_id"]
         if "user_id" in d:
             self.__dict__["user_id"] = d["user_id"]
         if "target_id" in d:
@@ -152,7 +153,7 @@ class GroupPokeNotice(Notice):
         return other == "GroupPokeNotice"
 
     def react(self):
-        api.send_group_msg(self.group_id, f"[CQ:at,qq={self.sender_id}]好痛！不要再戳啦！>_<")
+        api.send_group_msg(self.group_id, f"[CQ:at,qq={self.user_id}]好痛！不要再戳啦！\n[CQ:image,file=https://i0.hdslb.com/bfs/article/9d828e830cfddb578c98f5a25f128f6e463a5bc9.jpg@750w_750h_progressive.webp]")
 
 
 class GroupLuckyKingNotice(Notice):

@@ -17,6 +17,7 @@ def listen():
     elif result == "GroupDecreaseNotice" or result == "GroupIncreaseNotice":
         result.react()
     elif result == "FriendPokeNotice" or result == "GroupPokeNotice":
+        print(post)
         result.react()
     return ''
 

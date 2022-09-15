@@ -1,7 +1,7 @@
+import json
 import random
 import sqlite3
 import time
-
 from .base_objects import Message
 from core import Core
 import api
@@ -16,6 +16,14 @@ class PrivateMessage(Message):
         self.core = core
 
     def reply(self):
+        if '翻译@' in self.raw_message:
+            word = self.raw_message.split('@')[-1]
+            self.raw_message = '翻译@'
+        elif '学习@' in self.raw_message:
+            x = self.raw_message.split('@')
+            m_keyword = x[1]
+            m_reply = x[2]
+            self.raw_message = '学习@'
         r = self.core.match_keyword(self.raw_message)
         if not r:
             return
@@ -41,9 +49,22 @@ class PrivateMessage(Message):
                 if add_int > 0:
                     r = 'Yum！yum！好感度+%d' % add_int
                 elif add_int < 0:
-                    r = '不要再喂啦~好感度%d' % add_int
+                    r = '不要再喂啦~好感度%d\n[CQ:image,file=https://image.9game.cn/2019/12/9/127411150.png]' % add_int
                 else:
                     r = '嗯~什么都没有发生！'
+            elif r == "&trans":
+                r = api.youdao.trans(word)
+            elif r == "&learn":
+                if m_keyword in self.core.keywords:
+                    r = '学习失败！该条目已存在！'
+                else:
+                    self.core.keywords[m_keyword] = m_keyword
+                    self.core.replies[m_keyword] = m_reply
+                    with open('data/keywords.json', 'w', encoding='utf-8-sig') as f:
+                        f.write(json.dumps(self.core.keywords, ensure_ascii=False, indent=2))
+                    with open('data/replies.json', 'w', encoding='utf-8-sig') as f:
+                        f.write(json.dumps(self.core.replies, ensure_ascii=False, indent=2))
+                    r = '学习成功！'
             elif r == "&friendliness":
                 conn = sqlite3.connect('friendliness.db')
                 cursor = conn.cursor()
@@ -78,6 +99,14 @@ class GroupMessage(Message):
         return other == "GroupMessage"
 
     def reply(self):
+        if '翻译@' in self.raw_message:
+            word = self.raw_message.split('@')[-1]
+            self.raw_message = '翻译@'
+        elif '学习@' in self.raw_message:
+            x = self.raw_message.split('@')
+            m_keyword = x[1]
+            m_reply = x[2]
+            self.raw_message = '学习@'
         r = self.core.match_keyword(self.raw_message)
         if not r:
             return
@@ -102,9 +131,22 @@ class GroupMessage(Message):
                 if add_int > 0:
                     r = 'Yum！yum！好感度+%d' % add_int
                 elif add_int < 0:
-                    r = '不要再喂啦~好感度%d' % add_int
+                    r = '不要再喂啦~好感度%d\n[CQ:image,file=https://image.9game.cn/2019/12/9/127411150.png]' % add_int
                 else:
                     r = '嗯~什么都没有发生！'
+            elif r == "&trans":
+                r = api.youdao.trans(word)
+            elif r == "&learn":
+                if m_keyword in self.core.keywords:
+                    r = '学习失败！该条目已存在！'
+                else:
+                    self.core.keywords[m_keyword] = m_keyword
+                    self.core.replies[m_keyword] = m_reply
+                    with open('data/keywords.json', 'w', encoding='utf-8-sig') as f:
+                        f.write(json.dumps(self.core.keywords, ensure_ascii=False, indent=2))
+                    with open('data/replies.json', 'w', encoding='utf-8-sig') as f:
+                        f.write(json.dumps(self.core.replies, ensure_ascii=False, indent=2))
+                    r = '学习成功！'
             elif r == "&friendliness":
                 conn = sqlite3.connect('friendliness.db')
                 cursor = conn.cursor()

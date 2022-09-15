@@ -5,12 +5,15 @@ import time
 import urllib.request
 import urllib.parse
 import lxml.etree
+from youdao import Youdao_Trans
 
 authorized_groups = [
     826422163,
     970293394,
     962617351
 ]
+
+youdao = Youdao_Trans()
 
 
 def urlAt(node):
