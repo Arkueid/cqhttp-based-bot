@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b7a54f4-5e71-400b-b12e-d57acfe7c871" name="Changes" comment="2022/9/15">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqhttp/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqhttp/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cqhttp/go-cqhttp" beforeDir="false" afterPath="$PROJECT_DIR$/go-cqhttp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/db_tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/keywords.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/replies.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/replies.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/rule.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/cache/77ade4524a4aa131106d61b371346ab4.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/image.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/image.db.lock" beforeDir="false" afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/000109.ldb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/000112.ldb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/000119.log" beforeDir="false" afterPath="$PROJECT_DIR$/friendliness.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/CURRENT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/CURRENT.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/LOCK" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/LOG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/leveldb-v3/MANIFEST-000120" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/video.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/video.db.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/data/voices/1EF005FC-677B-E021-B4C1-BEBE9DCA66CB.amr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/device.json" beforeDir="false" afterPath="$PROJECT_DIR$/device.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/go-cqhttp.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/go-cqhttp.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/logs/2022-09-09.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/logs/2022-09-10.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/logs/2022-09-11.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/logs/2022-09-13.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cqhttp_windows_amd64/session.token" beforeDir="false" afterPath="$PROJECT_DIR$/session.token" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message_objects/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_objects/messages.py" afterDir="false" />
-    </list>
+    <list default="true" id="6b7a54f4-5e71-400b-b12e-d57acfe7c871" name="Changes" comment="2022/9/15:2156" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +15,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -226,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663243383611</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2022/9/15:2156">
+      <created>1663250210014</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663250210014</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,6 +217,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="test" />
     <MESSAGE value="2022/9/15" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022/9/15" />
+    <MESSAGE value="2022/9/15:2156" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022/9/15:2156" />
   </component>
 </project>
