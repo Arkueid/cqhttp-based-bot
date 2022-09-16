@@ -55,7 +55,7 @@ class PrivateMessage(Message):
             elif r == "&trans":
                 r = api.youdao.trans(word)
             elif r == "&learn":
-                if m_keyword in self.core.keywords:
+                if m_keyword in self.core.keywords or m_keyword in self.core.replies:
                     r = '学习失败！该条目已存在！'
                 else:
                     self.core.keywords[m_keyword] = m_keyword
@@ -137,7 +137,7 @@ class GroupMessage(Message):
             elif r == "&trans":
                 r = api.youdao.trans(word)
             elif r == "&learn":
-                if m_keyword in self.core.keywords:
+                if m_keyword in self.core.keywords or m_keyword in self.core.replies:
                     r = '学习失败！该条目已存在！'
                 else:
                     self.core.keywords[m_keyword] = m_keyword

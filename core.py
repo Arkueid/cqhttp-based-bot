@@ -41,7 +41,10 @@ class Core:
                     match_word = i
                     break
             if not match_word:
-                return None
+                if raw_message == "?" or raw_message == "？":
+                    return self.replies['4']
+                else:
+                    return None
             r = self.keywords[match_word]
             if "&" in r:
                 return r
