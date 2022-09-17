@@ -206,11 +206,14 @@ class GroupMessage(Message):
                     if x[1] in map(lambda x: str(x[1]), dic):
                         cursor.execute('select reply from replies where id=%s' % x[1])
                         rpls = cursor.fetchall()[0][0]
-                        if x[2] not in rpls.split('|'):
-                            cursor.execute('update replies set reply="%s" where id=%s' % (rpls + '|' + x[2], x[1]))
+                        if 'opt' in rpls:
+                            r = '学习失败！"opt"字段不允许改动！'
                         else:
-                            pass
-                        r = '学习成功！'
+                            if x[2] not in rpls.split('|'):
+                                cursor.execute('update replies set reply="%s" where id=%s' % (rpls + '|' + x[2], x[1]))
+                            else:
+                                pass
+                            r = '学习成功！'
                     else:
                         cursor.execute('insert into replies values("%s", "%s")' % (x[1], x[2]))
                         r = '学习成功！'

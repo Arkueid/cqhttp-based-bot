@@ -24,7 +24,7 @@ def create_keywords_table():
     try:
         conn.execute('create table keywords('
                      'id integer primary key autoincrement not null,'
-                     'keyword string not null,'
+                     'keyword text unique not null,'
                      'reply_id int not null);')
     except sqlite3.OperationalError as e:
         pass
@@ -37,7 +37,7 @@ def create_replies_table():
     try:
         conn.execute('create table replies('
                      'id integer primary key autoincrement not null,'
-                     'reply string unique not null);')
+                     'reply text unique not null);')
     except sqlite3.OperationalError as e:
         pass
     print(pd.read_sql('select * from replies;', conn, index_col='id'))
