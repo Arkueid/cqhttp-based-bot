@@ -7,11 +7,7 @@ import urllib.parse
 import lxml.etree
 from youdao import Youdao_Trans
 
-authorized_groups = [
-    826422163,
-    970293394,
-    962617351
-]
+authorized_groups = list()
 
 youdao = Youdao_Trans()
 

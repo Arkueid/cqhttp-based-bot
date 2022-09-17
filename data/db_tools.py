@@ -2,58 +2,76 @@ import sqlite3
 import pandas as pd
 
 
-def init_db():
-    # 不存在就创建
-    conn = sqlite3.connect("rule.db")
+def create_user_assets_table():
+    conn = sqlite3.connect('data.db')
     try:
-        sql1 = "create table keywords(" \
-               "id integer primary key autoincrement not null," \
-               "keyword text unique not null," \
-               "class int not null);"
-        conn.execute(sql1)
-        sql2 = "create table replies(" \
-               "id integer primary key autoincrement not null," \
-               "class int unique not null," \
-               "reply text unique not null);"
-        conn.execute(sql2)
-        conn.commit()
-    except Exception as e:
-        print(e)
-    finally:
-        conn.close()
+        conn.execute('create table user_assets('
+                     'id integer primary key autoincrement,'
+                     'user_id int unique not null,'
+                     'friendliness int not null default 50,'
+                     'money decimal not null default 0,'
+                     'last_sign datetime default "2022-03-07 00:00:00",'
+                     'jrrp int default 100,'
+                     'last_jrrp date default "2022-03-07 00:00:00");')
+    except sqlite3.OperationalError:
+        pass
+    print(pd.read_sql('select * from user_assets', conn))
+    conn.close()
 
 
-class Database:
-
-    def __init__(self):
-        self.conn = None
-
-    def connect(self, db):
-        self.conn = sqlite3.connect(db)
-
-    def print_table(self, table_name):
-        df = pd.read_sql("select * from %s;" % table_name, con=self.conn, index_col="id")
-        print(df)
-
-    def addTo(self, sequence, table_name):
-        df = pd.read_sql("select * from %s" % table_name, con=self.conn, index_col="id")
-        next_idx = df.index.max() + 1
-        df.loc[next_idx] = sequence
-        df.to_sql("keywords", self.conn, if_exists="replace")
-
-    def __del__(self):
-        if self.conn:
-            self.conn.close()
+def create_keywords_table():
+    conn = sqlite3.connect('data.db')
+    try:
+        conn.execute('create table keywords('
+                     'id integer primary key autoincrement not null,'
+                     'keyword string not null,'
+                     'reply_id int not null);')
+    except sqlite3.OperationalError as e:
+        pass
+    print(pd.read_sql('select keyword from keywords;', conn))
+    conn.close()
 
 
-if __name__ == '__main__':
-    conn = sqlite3.connect('../friendliness.db')
-    conn.execute('create table user_friendliness('
-                 'id integer primary key autoincrement,'
-                 'user_id int not null unique,'
-                 'friendliness int not null default 50);')
-    # conn.execute('insert into user_friendliness (user_id, friendliness) values(33275655354404, 100);')
-    # conn.execute('update user_friendliness set friendliness=0 where user_id=3327565304;')
-    # conn.commit()
-    # df = pd.read_sql('select * from user_friendliness', conn)
-    # print(df)
+def create_replies_table():
+    conn = sqlite3.connect('data.db')
+    try:
+        conn.execute('create table replies('
+                     'id integer primary key autoincrement not null,'
+                     'reply string unique not null);')
+    except sqlite3.OperationalError as e:
+        pass
+    print(pd.read_sql('select * from replies;', conn, index_col='id'))
+    conn.close()
+
+
+def init():
+    create_user_assets_table()
+    create_keywords_table()
+    create_replies_table()
+
+
+def db_to_excel():
+    conn = sqlite3.connect('data.db')
+    cursor = conn.cursor()
+    cursor.execute('select name from sqlite_master where type="table"')
+    ew = pd.ExcelWriter('data.xlsx')
+    for i in cursor.fetchall():
+        if i != "sqlite_sequence":
+            pd.read_sql('select * from %s' % i[0], conn).to_excel(ew, sheet_name=i[0], index=False)
+    ew.save()
+
+
+def excel_to_db():
+    conn = sqlite3.connect('data.db')
+    df = pd.read_excel('data.xlsx', sheet_name=None)
+    for i in df.keys():
+        curr = df[i]
+        for j in curr.to_numpy():
+            s = map(lambda x: f'"{x}"' if type(x) == pd._libs.tslibs.timestamps.Timestamp or type(x) == str else str(x), j)
+            conn.execute(f'insert into {i} values({",".join(s)})')
+    conn.commit()
+
+
+init()
+# db_to_excel()
+excel_to_db()

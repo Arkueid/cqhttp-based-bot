@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b7a54f4-5e71-400b-b12e-d57acfe7c871" name="Changes" comment="2022/9/15:2300">
+    <list default="true" id="6b7a54f4-5e71-400b-b12e-d57acfe7c871" name="Changes" comment="2022/9/16:1326">
+      <change afterPath="$PROJECT_DIR$/data/data.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/keywords.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/db_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/keywords.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/replies.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendliness.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_linux_amd64/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_linux_amd64/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-cqhttp_linux_amd64/go-cqhttp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/listen.py" beforeDir="false" afterPath="$PROJECT_DIR$/listen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/message_objects/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_objects/messages.py" afterDir="false" />
     </list>
@@ -52,7 +62,7 @@
       <recent name="D:\projects_python\cqhttp-based-bot" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.listen">
+  <component name="RunManager" selected="Python.1">
     <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cqhttp-based-bot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -66,6 +76,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="core" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cqhttp-based-bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,34 +168,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="notices" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="cqhttp-based-bot" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/message_objects" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/message_objects/notices.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.listen" />
-        <item itemvalue="Python.notices" />
+        <item itemvalue="Python.1" />
         <item itemvalue="Python.db_tools" />
         <item itemvalue="Python.messages" />
-        <item itemvalue="Python.1" />
+        <item itemvalue="Python.core" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663254627376</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2022/9/16:1326">
+      <created>1663305981131</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663305981131</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,6 +270,7 @@
     <MESSAGE value="2022/9/15" />
     <MESSAGE value="2022/9/15:2156" />
     <MESSAGE value="2022/9/15:2300" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022/9/15:2300" />
+    <MESSAGE value="2022/9/16:1326" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022/9/16:1326" />
   </component>
 </project>

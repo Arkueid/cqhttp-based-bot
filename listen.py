@@ -1,10 +1,13 @@
 from flask import Flask, request
 from utils import parsePost
 from core import Core
+from api import authorized_groups
 
 
 app = Flask("Aki-listen")
 core = Core("data/config.json")
+
+authorized_groups.extend(core.config['authorized-groups'])
 
 
 @app.route('/', methods=['post'])

@@ -1,8 +1,11 @@
 {
   "self_id": 3515950251,
   "self_nickname": "Aki",
-  "use-db": false,
-  "db-path": "rule.db",
-  "json-path": "data/keywords.json|data/replies.json",
-  "admins": [3327565304]
+  "database": "data/data.db",
+  "admins": [3327565304],
+  "authorized-groups": [
+        970293394,
+        925050202,
+        826422163
+    ]
 }
