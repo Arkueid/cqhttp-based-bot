@@ -187,7 +187,6 @@ class GroupMessage(Message):
     def reply(self):
         rm = self.raw_message.split('@', 1)[0]
         r = self.core.match_keyword(rm)
-        r = self.core.match_keyword(self.raw_message)
         # @Aki学习kw=关键词,rpid=0,rp=回复1|回复2|回复3
         if r == 'opt-learn':
             rmsg = self.raw_message.strip('[CQ:at,qq=%d]' % self.core.config['self_id'])
