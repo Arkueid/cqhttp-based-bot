@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b7a54f4-5e71-400b-b12e-d57acfe7c871" name="Changes" comment="2022/9/22:1922" />
+    <list default="true" id="6b7a54f4-5e71-400b-b12e-d57acfe7c871" name="Changes" comment="2022/9/22:1953">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -304,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663847038532</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="2022/9/22:1922">
+      <created>1663847179055</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1663847179055</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -335,6 +344,7 @@
     <MESSAGE value="2022/9/22:1905" />
     <MESSAGE value="2022/9/22:1943" />
     <MESSAGE value="2022/9/22:1922" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022/9/22:1922" />
+    <MESSAGE value="2022/9/22:1946" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022/9/22:1946" />
   </component>
 </project>
