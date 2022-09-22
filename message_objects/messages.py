@@ -292,7 +292,7 @@ class GroupMessage(Message):
             cursor = conn.cursor()
             cursor.execute('select user_id from user_assets')
             if self.user_id not in map(lambda x: x[0], cursor.fetchall()):
-                cursor.execute('insert into user_assets (user_id) values(%d)' % self.user_id)
+                cursor.execute('insert into user_assets (user_id) values(%s)' % self.user_id)
             cursor.execute('select last_jrrp from user_assets')
             last_jrrp = cursor.fetchall()[0][0]
             td = time.strftime('%Y-%m-%d', time.localtime(time.time()))

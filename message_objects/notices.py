@@ -1,3 +1,6 @@
+import random
+import time
+
 import api
 from .base_objects import Notice
 
@@ -105,6 +108,12 @@ class GroupRecallNotice(Notice):
         if "message_id" in d:
             self.__dict__["message_id"] = d["message_id"]
 
+    def __eq__(self, other):
+        return other == 'GroupRecallNotice'
+
+    def react(self):
+        api.send_group_msg(self.group_id, f'[CQ:at,qq={self.user_id}]' if 'user_id' in self.__dict__ else '楼上' + '发现了统一场论，怕引起轰动撤回了！<(*￣▽￣*)/')
+
 
 class FriendRecallNotice(Notice):
 
@@ -153,7 +162,14 @@ class GroupPokeNotice(Notice):
         return other == "GroupPokeNotice"
 
     def react(self):
-        api.send_group_msg(self.group_id, f"[CQ:at,qq={self.user_id}]好痛！不要再戳啦！\n[CQ:image,file=https://i0.hdslb.com/bfs/article/9d828e830cfddb578c98f5a25f128f6e463a5bc9.jpg@750w_750h_progressive.webp]")
+        if self.self_id == self.user_id:
+            ls = [
+                f"[CQ:at,qq={self.user_id}]好痛！不要再戳啦！\n[CQ:image,file=https://i0.hdslb.com/bfs/article/9d828e830cfddb578c98f5a25f128f6e463a5bc9.jpg@750w_750h_progressive.webp]",
+                f"[CQ:at,qq={self.user_id}]你干嘛~唉哟~\n[CQ:image,file=http://mms2.baidu.com/it/u=3795693898,418483011&fm=253&app=138&f=JPEG&fmt=auto&q=75?w=300&h=300]"
+                  ]
+            random.seed(time.time())
+            msg = random.choice(ls)
+            api.send_group_msg(self.group_id, msg)
 
 
 class GroupLuckyKingNotice(Notice):
