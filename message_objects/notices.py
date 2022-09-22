@@ -142,7 +142,13 @@ class FriendPokeNotice(Notice):
         return other == "FriendPokeNotice"
 
     def react(self):
-        api.send_private_msg(self.sender_id, '', "好痛！不要再戳啦！\n[CQ:image,file=https://i0.hdslb.com/bfs/article/9d828e830cfddb578c98f5a25f128f6e463a5bc9.jpg@750w_750h_progressive.webp]")
+        ls = [
+            f"[CQ:at,qq={self.user_id}]好痛！不要再戳啦！\n[CQ:image,file=https://i0.hdslb.com/bfs/article/9d828e830cfddb578c98f5a25f128f6e463a5bc9.jpg@750w_750h_progressive.webp]",
+            f"[CQ:at,qq={self.user_id}]你干嘛~唉哟~\n[CQ:image,file=https://www.douyin766.com/d/file/p/2021/01-02/2c9a490403ca8366ea29e27515a5c466.jpg]"
+        ]
+        random.seed(time.time())
+        msg = random.choice(ls)
+        api.send_private_msg(self.sender_id, '', msg)
 
 
 class GroupPokeNotice(Notice):
@@ -162,10 +168,10 @@ class GroupPokeNotice(Notice):
         return other == "GroupPokeNotice"
 
     def react(self):
-        if self.self_id == self.user_id:
+        if self.self_id == self.target_id:
             ls = [
                 f"[CQ:at,qq={self.user_id}]好痛！不要再戳啦！\n[CQ:image,file=https://i0.hdslb.com/bfs/article/9d828e830cfddb578c98f5a25f128f6e463a5bc9.jpg@750w_750h_progressive.webp]",
-                f"[CQ:at,qq={self.user_id}]你干嘛~唉哟~\n[CQ:image,file=http://mms2.baidu.com/it/u=3795693898,418483011&fm=253&app=138&f=JPEG&fmt=auto&q=75?w=300&h=300]"
+                f"[CQ:at,qq={self.user_id}]你干嘛~唉哟~\n[CQ:image,file=https://www.douyin766.com/d/file/p/2021/01-02/2c9a490403ca8366ea29e27515a5c466.jpg]"
                   ]
             random.seed(time.time())
             msg = random.choice(ls)

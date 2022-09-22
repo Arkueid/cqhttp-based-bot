@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b7a54f4-5e71-400b-b12e-d57acfe7c871" name="Changes" comment="2022/9/21:2242">
+    <list default="true" id="6b7a54f4-5e71-400b-b12e-d57acfe7c871" name="Changes" comment="2022/9/22:1922">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/listen.py" beforeDir="false" afterPath="$PROJECT_DIR$/listen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message_objects/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_objects/messages.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/message_objects/notices.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_objects/notices.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -274,7 +273,35 @@
       <option name="project" value="LOCAL" />
       <updated>1663771348254</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="2022/9/22:1905">
+      <created>1663844728033</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1663844728033</updated>
+    </task>
+    <task id="LOCAL-00016" summary="2022/9/22:1905">
+      <created>1663844869417</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1663844869417</updated>
+    </task>
+    <task id="LOCAL-00017" summary="2022/9/22:1905">
+      <created>1663845019239</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1663845019239</updated>
+    </task>
+    <task id="LOCAL-00018" summary="2022/9/22:1922">
+      <created>1663845752494</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1663845752494</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -301,6 +328,9 @@
     <MESSAGE value="2022/9/17" />
     <MESSAGE value="2022/9/17:2108" />
     <MESSAGE value="2022/9/21:2242" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022/9/21:2242" />
+    <MESSAGE value="2022/9/22:1906" />
+    <MESSAGE value="2022/9/22:1905" />
+    <MESSAGE value="2022/9/22:1922" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022/9/22:1922" />
   </component>
 </project>
