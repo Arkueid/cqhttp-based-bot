@@ -112,7 +112,7 @@ class GroupRecallNotice(Notice):
         return other == 'GroupRecallNotice'
 
     def react(self):
-        api.send_group_msg(self.group_id, f'[CQ:at,qq={self.user_id}]' if 'user_id' in self.__dict__ else '楼上' + '发现了统一场论，怕引起轰动撤回了！<(*￣▽￣*)/')
+        api.send_group_msg(self.group_id, f'[CQ:at,qq={self.user_id}]发现了统一场论，怕引起轰动撤回了！<(*￣▽￣*)/')
 
 
 class FriendRecallNotice(Notice):
