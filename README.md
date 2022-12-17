@@ -1,6 +1,6 @@
 # cqhttp-based-bot
 #### 基于cqhttp的自动回复机器人Aki-demo
-#### 用于个人学习尝试，可部署在服务器上，由于是个人使用，其他参数文件就不介绍了
+#### 用于个人学习尝试，可部署在服务器上，其他参数文件就不介绍了
 #### ubuntu server 上借助screen使用如下命令：
 #### 创建名为cqhttp的screen窗口，运行go-cqhttp
 `screen -S cqhttp`
